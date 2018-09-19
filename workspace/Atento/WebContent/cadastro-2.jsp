@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="atento-header.jsp" %>
+<%@ page import= "com.atento.dao.TagDAO, java.util.List, com.atento.entidade.Tag" %>
 <main class="contact-form">
     <header id="titulo-pagina">
         <i class="fas fa-file-alt" id="titulo-pagina-icone"></i>
@@ -144,7 +145,14 @@
                             <label for="tags"><b>Tags de habilidade</b></label>
                             <br>
                             <select class="form-control" id="form-tags-select" name="tags" multiple="multiple" data-placeholder="Selecione as tags" style="width: 100%;">
-			                    <option>Alabama</option>
+			                 <%
+			                    	//for(Tag t: tags){
+			                    %>
+			                    		<!-- <option value="<%=//t.getId()%>"><%=//t.getTag() %></option> -->
+			                    <%
+			                    	//}
+			                    %>    
+				    	<option>Alabama</option>
 			                    <option>Alaska</option>
 			                    <option>California</option>
 			                    <option>Delaware</option>
@@ -190,6 +198,18 @@
                         </fieldset>
                     </td>
                 </tr>
+		    
+		   <tr>
+                    <td colspan="2">
+                        <fieldset class="form-campo">
+                            <label for="nFace"><b>Número de Amigos</b></label>
+                            <br>
+                            <input type="number" name="nFace" value="" placeholder="">
+                            <br>
+
+                        </fieldset>
+                    </td>
+                </tr>
 
                 <tr>
                     <td colspan="2">
@@ -203,12 +223,48 @@
                     </td>
                 </tr>
 
+		 <tr>
+                    <td colspan="2">
+                        <fieldset class="form-campo">
+                            <label for="nTwit"><b>Número de Seguidores</b></label>
+                            <br>
+                            <input type="number" name="nTwit" value="" placeholder="">
+                            <br>
+
+                        </fieldset>
+                    </td>
+                </tr>
+		    
                 <tr>
                     <td colspan="2">
                         <fieldset class="form-campo">
                             <label for="linkedin"><b>Link LinkedIn</b></label>
                             <br>
                             <input type="url" name="linkedin" value="" placeholder="">
+                            <br>
+
+                        </fieldset>
+                    </td>
+                </tr>
+		    
+		 <tr>
+                    <td colspan="2">
+                        <fieldset class="form-campo">
+                            <label for="nFace"><b>Número de Conexões</b></label>
+                            <br>
+                            <input type="number" name="nLink" value="" placeholder="">
+                            <br>
+
+                        </fieldset>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2">
+                        <fieldset class="form-campo">
+                            <label for="youtube"><b>Link do Vídeo do Youtube</b></label>
+                            <br>
+                            <input type="url" name="youtube" value="" placeholder="">
                             <br>
 
                         </fieldset>
